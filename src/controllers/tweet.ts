@@ -1,8 +1,11 @@
-class TweetController{
-    async getAllTweets() {
-        return [1,2,3,4,5,6,7,8,9,10];
-    }
+import numbers from '../data/numbers';
 
+class TweetController {
+    async getAllTweets() {
+        // Filtrar solo los números pares
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        return evenNumbers;
+    }
 }
 
 export default TweetController;
